@@ -45,6 +45,32 @@ import sys
 # and builds and returns a word/count dict for it.
 # Then print_words() and print_top() can just call the utility function.
 
+def utility_func(file):
+    f=open(file,'r',encoding='utf-8')
+    for line in f:
+        line.split()
+        line.sort()
+        print(line)
+        
+        # for c in range(len(line)):
+            # if line[c]==' ':
+                # letra=''
+                # palabra=''
+                # i=0
+                # while letra !=' ':
+                    # palabra=palabra+letra
+                    # i=i+1
+                    # letra=line[c+i]
+                # print(palabra)
+            # elif line[c]==line[-1]:
+                # print(palabra)
+                
+    f.close()
+    
+    
+def print_words(file):
+    utility_func(file)
+
 ###
 
 # This basic command line argument parsing code is provided and
