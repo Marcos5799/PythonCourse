@@ -47,11 +47,16 @@ import sys
 
 def utility_func(file):
     f=open(file,'r',encoding='utf-8')
+    dict={}
+    j=0
     for line in f:
-        line.split()
-        line.sort()
-        print(line)
-        
+        palabras=line.split()
+        i=0
+        for i in range(len(palabras)):
+            if palabras[i].lower() in dict:
+                dict[palabras[i].lower()]= dict[palabras[i].lower()]+1
+            else:
+                dict[palabras[i].lower()]=1
         # for c in range(len(line)):
             # if line[c]==' ':
                 # letra=''
@@ -64,12 +69,18 @@ def utility_func(file):
                 # print(palabra)
             # elif line[c]==line[-1]:
                 # print(palabra)
-                
+        j=j+len(palabras)
+        palabras=0
+        print(line)
+        dict2=sorted(dict)
+    for key in dict2:
+        print(key+" %d" % (dict[key]))
     f.close()
     
     
 def print_words(file):
     utility_func(file)
+
 
 ###
 
